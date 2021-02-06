@@ -13,11 +13,12 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/images",
       },
       __key: "images",
     },
@@ -25,9 +26,17 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: "./src/pages",
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown-pages`,
+        name: `markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };

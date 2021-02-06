@@ -1,0 +1,39 @@
+$theme-colors: (
+  "primary":#d8d8f0,
+  "info": #4140B2
+);
+
+$body-bg: #1f2736;
+
+@import "~bootstrap/scss/bootstrap";
+
+.card {
+  background-color: rgb(244, 244, 248);
+  border-radius: 0px;
+}
+
+.page-bg{
+  max-width: 100%;
+  width: 100%;
+}
+
+.first-bg{
+  width: 100%;
+  background-color: rgb(244, 244, 248);
+}
+
+.second-bg{
+  width: 100%;
+  background-color: rgb(229, 229, 233);
+}
+
+.titleCard-header{
+  background-color: rgba(244, 244, 248, 0);
+  border-bottom: none;
+  color: #6b35e9;
+  cursor: pointer;
+}
+
+hr{
+  margin: 30px 5px 30px 5px;
+}
