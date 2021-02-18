@@ -1,9 +1,9 @@
 $theme-colors: (
-  "primary":#d8d8f0,
-  "info": #4140B2
+  "primary":#58b364,
+  "info": rgb(48, 110, 62)
 );
 
-$body-bg: #1f2736;
+$body-bg: #111111;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -36,4 +36,10 @@ $body-bg: #1f2736;
 
 hr{
   margin: 30px 5px 30px 5px;
+}
+
+#glCanvas{
+  position: absolute;
+  margin: 0px -15px;
+  width: 100%;
 }

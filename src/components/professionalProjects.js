@@ -57,7 +57,7 @@ const ProfessionalProjects = () => {
   const professionalProjectsCard = (profData, i) => {
     return (
       <Row style={professionalCardStyle}>
-        <Col style={professionalProjectsStyle} xl={4} md={4}>
+        <Col style={professionalProjectsStyle} xl={5} md={5}>
           {i % 2 == 0 &&
             <img style={{ borderRadius: "3px", marginLeft: "auto", marginRight: "auto", maxWidth: 100 + '%' }} src={profData.featuredImage}></img>
           }
@@ -65,7 +65,7 @@ const ProfessionalProjects = () => {
             professionalProject(profData, i)
           }
         </Col>
-        <Col style={professionalProjectsStyle} xl={4} md={4}>
+        <Col style={professionalProjectsStyle} xl={5} md={5}>
           {i % 2 == 1 &&
             <img style={{ borderRadius: "3px", marginLeft: "auto", marginRight: "auto", maxWidth: 100 + '%' }} src={profData.featuredImage}></img>
           }

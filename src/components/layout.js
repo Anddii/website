@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,10 +9,17 @@ import PersonalProjects from './personalProjects'
 import Work from './work'
 
 import { SocialIcon } from 'react-social-icons';
+import { main } from "../../webgl/webgl.js"
 
 const Layout = () => {
+
+    useEffect(() => {
+        main()
+    },[]);
+
     return (
         <Container className='page-bg'>
+            <canvas id="glCanvas" width="640" height="480"></canvas>
             <Row>
                 <Col>
                     <About />

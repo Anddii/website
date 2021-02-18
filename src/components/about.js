@@ -13,8 +13,8 @@ const About = () => {
             </Row>
             <Row>
                 <Col>
-                    <p class="text-white">Currenty working at the MTV Oy as a System Specialist. Interested in backend- and game development. Occasionally I do freelance work.</p>
-                    <p class="text-white">❤❤❤</p>
+                    <p class="text-white">Currenty working at the MTV Oy as a System Specialist. Interested in backend- and game development. Available for freelance work.</p>
+                    <p class="text-white">💚💚💚</p>
                 </Col>
             </Row>
         </Container >
