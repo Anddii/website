@@ -98,7 +98,7 @@ const ProfessionalProjects = () => {
       maxWidth: '400px',
       marginBottom: '0px'
     }
-    if (i % 2 == 1 && window.innerWidth >= 768) {
+    if (i % 2 == 1 && document.body.clientWidth >= 768) {
       style2 = {
         marginLeft: "auto",
         marginRight: "auto",
@@ -132,7 +132,7 @@ const ProfessionalProjects = () => {
       {data &&
         data.map(({ node }, i) => {
           const profData = node.frontmatter;
-          if (window.innerWidth >= 768) {
+          if (document.body.clientWidth >= 768) {
             return (
               <div>
                 {professionalProjectsCard(profData, i)}
