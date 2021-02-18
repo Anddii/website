@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge'
 
+import {isMobile} from 'react-device-detect';
+
 
 const professionalCardStyle = {
   justifyContent: "center",
@@ -26,8 +28,6 @@ const professionalProjectsStyle = {
 }
 
 const ProfessionalProjects = () => {
-
-  const [width, setWidth] = useState(window.innerWidth)
 
   let data = useStaticQuery(graphql`
     query MyQuery {
@@ -100,7 +100,7 @@ const ProfessionalProjects = () => {
       maxWidth: '400px',
       marginBottom: '0px'
     }
-    if (i % 2 == 1 && width >= 768) {
+    if (i % 2 == 1 && !isMobile) {
       style2 = {
         marginLeft: "auto",
         marginRight: "auto",
@@ -134,7 +134,7 @@ const ProfessionalProjects = () => {
       {data &&
         data.map(({ node }, i) => {
           const profData = node.frontmatter;
-          if (width >= 768) {
+          if (!isMobile) {
             return (
               <div>
                 {professionalProjectsCard(profData, i)}

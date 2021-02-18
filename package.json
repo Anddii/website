@@ -25,12 +25,13 @@
     "gatsby-source-filesystem": "^2.10.0",
     "gatsby-transformer-remark": "^2.15.0",
     "gatsby-transformer-sharp": "^2.11.0",
+    "gl-matrix": "^3.3.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.3",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "sass": "^1.32.5",
-    "gl-matrix": "^3.3.0"
+    "sass": "^1.32.5"
   },
   "devDependencies": {
     "react-social-icons": "^4.1.0"
