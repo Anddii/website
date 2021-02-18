@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from 'gatsby';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -26,6 +26,8 @@ const professionalProjectsStyle = {
 }
 
 const ProfessionalProjects = () => {
+
+  const [width, setWidth] = useState(window.innerWidth)
 
   let data = useStaticQuery(graphql`
     query MyQuery {
@@ -55,11 +57,6 @@ const ProfessionalProjects = () => {
 
 
   const professionalProjectsCard = (profData, i) => {
-
-    if (typeof window === `undefined`) {
-      return (<></>);
-    }
-
     return (
       <Row style={professionalCardStyle}>
         <Col style={professionalProjectsStyle} xl={5} md={5}>
@@ -103,7 +100,7 @@ const ProfessionalProjects = () => {
       maxWidth: '400px',
       marginBottom: '0px'
     }
-    if (i % 2 == 1 && window.innerWidth >= 768) {
+    if (i % 2 == 1 && width >= 768) {
       style2 = {
         marginLeft: "auto",
         marginRight: "auto",
@@ -137,7 +134,7 @@ const ProfessionalProjects = () => {
       {data &&
         data.map(({ node }, i) => {
           const profData = node.frontmatter;
-          if (window.innerWidth >= 768) {
+          if (width >= 768) {
             return (
               <div>
                 {professionalProjectsCard(profData, i)}
